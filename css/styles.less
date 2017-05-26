@@ -124,13 +124,28 @@ nav {
 	margin-left: 229px;
 	margin-right: 363px;
 	.heading {
-		font-size: 29px;
-		margin: 40px 0 0 60px;
+    font-size: 30px;
+    margin: 30px 0 0 55px;
 	}
 	.strip {
 		background: #fff;
-		height: 75px;
-		margin-top: 25px;
+		margin-top: 21px;
+	}
+	.stripbox {
+		display: inline-block;
+		border-right: 1px solid #f7f7f7;
+		width: 19%;
+		img {
+			margin: 55px 25px 55px;
+		}
+	}
+	.stripbox:first-of-type {
+		img {
+			margin-left: 60px;
+		}
+	}
+	.stripbox:last-of-type {
+		border: none;
 	}
 }
 
@@ -140,7 +155,7 @@ nav {
 	position: absolute;
 	top: 91px;
 	left: 0px;
-	height: 100%;
+	height: 1200px;
 	transition: all 0.5s ease;
 	background: #2a2d33;
 	.left-main {
@@ -150,7 +165,7 @@ nav {
 			color: #7f8083;
 			position: relative;
 			top: 20px;
-			left: 20px;
+			left: 27px;
 			font-size: 11px;
 		}
 	}
@@ -162,25 +177,15 @@ nav {
 		position: absolute;
 		top: 91px;
 		right: 0px;
-		height: 100%;
+		height: 1200px;
 		transition: all 0.5s ease;
 		background: #ededed;
 }
 
 
 /* Animated Navigation */
-@font-face {
-	font-family: 'ecoico';
-	src:url('../fonts/ecoico.eot');
-	src:url('../fonts/ecoico.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/ecoico.woff') format('woff'),
-		url('../fonts/ecoico.ttf') format('truetype'),
-		url('../fonts/ecoico.svg#ecoico') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
 
-.cbp-vimenu {
+ul.menu {
 	/*position: fixed;*/
 	overflow: hidden;
 	top: 0;
@@ -189,87 +194,118 @@ nav {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	/*background: #f7f7f7;*/
+	li {
+		a {
+			display: block;
+			height: 40px;
+			color: #aeaeb0;
+			text-decoration: none;
+			border-bottom: 1px solid rgba(0,0,0,0.05);
+			-webkit-transition: background 0.25s ease-in-out, padding 0.25s ease-in-out, color 0.25s ease-in-out;
+			-moz-transition: background 0.25s ease-in-out, padding 0.25s ease-in-out, color 0.25s ease-in-out;
+			transition: background 0.25s ease-in-out, padding 0.25s ease-in-out, color 0.25s ease-in-out;
+			span {
+				vertical-align: top;
+				top: 8px;
+				left: 8px;
+				position: relative;
+			}
+		}
+		.menu-svg {
+			width: 32px;
+			height: 32px;
+			margin: 4px 0 0 25px;
+			path {
+				fill: #63666e;
+				-webkit-transition: fill 0.25s ease-in-out;
+				-moz-transition: fill 0.25s ease-in-out;
+				transition: fill 0.25s ease-in-out;
+			}
+		}
+		a:hover {
+			background: #535968;
+			color: #fff;
+			padding-left: 5px;
+			.menu-svg {
+				path {
+					fill: #51d2b7;
+				}
+			}
+		}
+		a.active {
+			background: #656c7e;
+			color: #fff;
+			.menu-svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
 }
 
-.cbp-vimenu li a {
-	display: block;
-	text-indent: -500em;
-	height: 4em;
-	/*width: 5em;*/
-	line-height: 5em;
-	text-align: left;
-	color: #999;
-	position: relative;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
-	-webkit-transition: background 0.1s ease-in-out;
-	-moz-transition: background 0.1s ease-in-out;
-	transition: background 0.1s ease-in-out;
-}
 
-.cbp-vimenu li a:hover,
-.cbp-vimenu li:first-child a{
-	background: #656c7e;
-	color: #fff;
+/* Posts */
+.posts {
+	margin: 40px 45px;
+	.post-heading {
+		color: #6c6d6f;
+    height: 50px;
+    padding-top: 5px;
+		.btn-default {
+			background: none;
+			float: right;
+			margin-left: 10px;
+			i {
+				color: #6c6d6f;
+			}
+		}
+	}
 }
-
-/* class for current item */
-.cbp-vimenu li.cbp-vicurrent a {
+.post {
 	background: #fff;
-	color: #656c7e;
+	position: relative;
+	border: 1px solid #d5d5d5;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-khtml-border-radius: 3px;
+	img.user {
+		position: absolute;
+		left: 15px;
+		top: 15px;
+	}
+	.header {
+    margin: 0 0 0 90px;
+    font-size: 14px;
+    padding-top: 5px;
+	}
+	.header:first-of-type {
+		margin-top: 20px;
+	}
+	.header + .header {
+		color: #b9b9b9;
+	}
+	.body {
+		margin-top: 18px;
+		font-size: 14px;
+		color: #6c6d6f;
+		p {
+			margin: 0 0 10px 20px;
+		}
+		img {
+			margin-top: 10px;
+			width: 100%;
+		}
+	}
 }
 
-.cbp-vimenu li a:before {
-	font-family: 'ecoico';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	text-indent: 0em;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	font-size: 1.4em;
-	-webkit-font-smoothing: antialiased;
-}
 
-.cbp-vimenu li a.icon-logo:before {
-	content: "C";
-	font-weight: 700;
-	font-size: 300%;
-	font-family: 'Lato', Calibri, Arial, sans-serif;
-}
+/* Media Queries */
+/*@media screen and (max-height: 34.9375em) { 
 
-.icon-search:before {
-	content: "\e004";
-}
-
-.icon-archive:before {
-	content: "\e005";
-}
-
-.icon-download:before {
-	content: "\e006";
-}
-
-.icon-location:before {
-	content: "\e007";
-}
-
-.icon-images:before {
-	content: "\e009";
-}
-
-.icon-pencil:before {
-	content: "\e008";
-}
-
-/* Example for media query (depends on total height of menu) */
-@media screen and (max-height: 34.9375em) { 
-
-	.cbp-vimenu {
+	.menu {
 		font-size: 70%;
 	}
 
-}
+}*/
