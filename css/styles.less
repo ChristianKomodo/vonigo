@@ -155,7 +155,7 @@ nav {
 	position: absolute;
 	top: 91px;
 	left: 0px;
-	height: 1200px;
+	height: 900px;
 	transition: all 0.5s ease;
 	background: #2a2d33;
 	.left-main {
@@ -172,14 +172,49 @@ nav {
 }
 
 .sidebar-right {
-		width: 363px;
-		padding-top: 91px;
-		position: absolute;
-		top: 91px;
-		right: 0px;
-		height: 1200px;
-		transition: all 0.5s ease;
-		background: #ededed;
+	width: 363px;
+	position: absolute;
+	top: 91px;
+	right: 0px;
+	height: 900px;
+	transition: all 0.5s ease;
+	background: #ededed;
+	font-size: 14px;
+	.right-main {
+		height: 43px;
+		margin-bottom: 20px;
+		background: url(../img/nav-expand-right.png) no-repeat top left;
+	}
+	hr {
+		margin: 5px 20px 8px;
+		border: 0;
+		height: 0;
+		border-top: 1px solid rgba(33, 33, 33, 0.1);
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	}
+	a, p, img {
+		padding: 0 0 0 20px;
+	}
+	a {
+		display: block;
+    margin-bottom: 3px;
+    text-decoration: none;
+	}
+	a, span {
+		font-size: 13px;
+		font-weight: bold;
+		color: #2a2d33;
+	}
+	p {
+		color: #6c6d6f;
+		margin: 15px 0 0 0;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	img.sidebar-icon {
+		vertical-align: middle;
+		margin: 10px 10px 0 0;
+	}
 }
 
 
@@ -190,7 +225,6 @@ ul.menu {
 	overflow: hidden;
 	top: 0;
 	left: 0;
-	height: 100%;
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
