@@ -1,4 +1,7 @@
 # Vonigo Theme
-HTML/CSS theme built to match a Dribble design image found here:
+HTML/CSS:
+http://sectorfive.com/theme/
 
-https://dribbble.com/shots/1487200-Vonigo-Dashboard/attachments/222662
+Built to match the [Dribble shot](https://dribbble.com/shots/1487200-Vonigo-Dashboard) below:
+
+![Vonigo Theme Image](https://cdn.dribbble.com/users/40433/screenshots/1487200/attachments/222662/Dashboard.png)
